@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 
 namespace WristSlapper
 {
@@ -29,6 +30,16 @@ namespace WristSlapper
             {
                 txtMouseMovementCount.Text = string.Format("You've moved the mouse {0} times in this session", value);
             }
+        }
+        
+        public void TimerStarted()
+        {
+            txtTimeElapsed.Foreground = new SolidColorBrush(Colors.Green);
+        }
+        
+        public void TimerStopped()
+        {
+            txtTimeElapsed.Foreground = new SolidColorBrush(Colors.Red);
         }
     }
 }
