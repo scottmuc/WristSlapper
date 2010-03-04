@@ -1,0 +1,28 @@
+﻿<Window x:Class="WristSlapper.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    WindowStyle="None" AllowsTransparency="True"
+    Background="Transparent"
+    Title="WristSlapper" Height="100" Width="300"
+    >
+    <Window.Resources>
+        <LinearGradientBrush x:Key="WindowFrameBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+          <GradientStop Color="Gray" Offset="0.4"/>
+          <GradientStop Color="Gray" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Resources>    
+    
+    <Border Background="#50FFFFFF" CornerRadius="5" BorderBrush="{StaticResource WindowFrameBrush}" BorderThickness="2,2,2,2">
+        <Grid Background="#DADADA">  
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>         
+            <TextBlock Grid.Row="0" Name="txtTimeElapsed" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <TextBlock Grid.Row="1" Name="txtMouseMovementCount" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="3" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Bottom">Double-click this window to start the timer</Label>
+        </Grid>
+    </Border>
+</Window>
