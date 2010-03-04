@@ -10,7 +10,7 @@ namespace WristSlapper
         
         public MainWindow(Controller controller)     
         {
-            this.controller = controller;            
+            this.controller = controller;
             InitializeComponent();
         }
         

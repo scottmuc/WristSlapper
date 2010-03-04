@@ -32,7 +32,8 @@ namespace WristSlapper
         
         private void WhenStartingTimer(object sender, EventArgs e)
         {
-            timer.Start();           
+            timer.Start();
+            System.Windows.Forms.Cursor.Hide();
         }
         
         private void Mouse_Moved(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace WristSlapper
             {
                 mainWindow.MouseMovementCount = ++mouseMovedCount;
                 timer.Stop();
+                System.Windows.Forms.Cursor.Show();
             }
         }
         
